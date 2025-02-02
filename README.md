@@ -110,3 +110,18 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+## Running Docker
+
+- docker-compose up
+
+## Database setup instructions
+
+- Sign up to timescale db
+- Create a new database
+- Put the connection string in the env file
+
+## Testing the backend APIs
+
+- Run unit test inside entity folder(.spec.ts file)
+- Run integration test in the test folder
