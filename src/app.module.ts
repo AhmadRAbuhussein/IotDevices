@@ -8,6 +8,8 @@ import { AuthModule } from './auth/auth.module';
 import { DevicesModule } from './devices/devices.module';
 import { DeviceDataModule } from './device-data/device-data.module';
 import typeorm from './config/typeorm';
+import { MockDataModule } from './mock-data/mock-data.module';
+
 
 @Module({
   imports: [
@@ -22,7 +24,8 @@ import typeorm from './config/typeorm';
     UsersModule,
     AuthModule,
     DevicesModule,
-    DeviceDataModule
+    DeviceDataModule,
+    MockDataModule
   ],
   controllers: [AppController],
   providers: [AppService],
