@@ -6,26 +6,26 @@ services:
     container_name: nest_postgres
     restart: always
     environment:
-      POSTGRES_USER: nest_user
-      POSTGRES_PASSWORD: nest_password
-      POSTGRES_DB: nest_db
+      POSTGRES_USER: tsdbadmin
+      POSTGRES_PASSWORD: oefixu026ou6a3qr
+      POSTGRES_DB: tsdb
     ports:
-      - "5432:5432"
+      - "32953:32953"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   nestjs-app:
     build: .
-    container_name: nestjs_app
+    container_name: nxgen-backend
     restart: always
     depends_on:
       - postgres
     environment:
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
-      DATABASE_USER: nest_user
-      DATABASE_PASSWORD: nest_password
-      DATABASE_NAME: nest_db
+      DATABASE_HOST: nqawzwlvtf.cy67vd5uxz.tsdb.cloud.timescale.com
+      DATABASE_PORT: 32953
+      DATABASE_USER: tsdbadmin
+      DATABASE_PASSWORD: oefixu026ou6a3qr
+      DATABASE_NAME: tsdb
     ports:
       - "3000:3000"
     volumes:
