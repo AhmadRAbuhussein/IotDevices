@@ -1,5 +1,5 @@
-import { DeviceDatum } from 'src/device-data/entities/device-datum.entity';
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany } from 'typeorm';
+import { DeviceDatum } from '@device-data/entities/device-datum.entity';
 
 @Entity()
 export class Device {
